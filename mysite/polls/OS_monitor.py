@@ -24,14 +24,10 @@ def disk_used():
     d = psutil.disk_usage('/')
     return d.percent
 
-def network():
-    net = psutil.net_io_counters(pernic=True)
-    print("Nerwork data:\n",net)
-
-def users():
+def user_name():
     info = psutil.users()
-    print("User name: ",info[0].name)
-    boot = psutil.boot_time()
-    print("Boot time: ",boot)
+    return info[0].name
+
+def user_boot_time():
     formated = datetime.datetime.fromtimestamp(psutil.boot_time()).strftime("%Y-%m-%d %H:%M:%S")
-    print("Formated: ",formated)
+    return formated
