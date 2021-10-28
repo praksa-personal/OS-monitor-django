@@ -1,0 +1,46 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'table.css' %}"/>
+  <!doctype html>
+  <html>
+      <body>
+        <h1>Process and system utilities</h1>
+        <table>
+          <tr>
+            <th>User:</th>
+            <th>{{ user_name }}</th>
+          </tr>
+          <tr>
+            <th>Boot time:</th>
+            <th>{{ user_boot_time }}</th>
+          </tr>
+          <tr>
+            <th>CPU cores:</th>
+            <th>{{ cpu_cores }}</th>
+          </tr>
+          <tr>
+            <th>CPU util [%]:</th>
+            <th>{{ cpu_util }}</th>
+          </tr>
+          <tr>
+            <th>Memory used [%]:</th>
+            <th>{{ memory_used }}</th>
+          </tr>
+          <tr>
+            <th>Memory available [%]:</th>
+            <th>{{ memory_available }}</th>
+          </tr>
+          <tr>
+            <th>Disk name:</th>
+            <th>{{ disk_name }}</th>
+          </tr>
+          <tr>
+            <th>Disk space:</th>
+            <th>{{ disk_space }}</th>
+          </tr>
+          <tr>
+            <th>Disk used [%]:</th>
+            <th>{{ disk_used }}</th>
+          </tr>
+        </table>
+      </body>
+  </html>
