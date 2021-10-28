@@ -18,3 +18,12 @@ table {
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+  .test-form{
+    padding-top: 5%;
+    padding-left: 5%;
+  }
+
+  .begin-btn{
+    padding-left: 5%;
+  }

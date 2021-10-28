@@ -34,7 +34,7 @@
             <th>{{ disk_name }}</th>
           </tr>
           <tr>
-            <th>Disk space:</th>
+            <th>Disk space [GB]:</th>
             <th>{{ disk_space }}</th>
           </tr>
           <tr>
@@ -42,5 +42,27 @@
             <th>{{ disk_used }}</th>
           </tr>
         </table>
+        <div class="test-form">
+          <form action="test-pick">
+            <label for="test">Choose a test:</label>
+            <select name="tests" id="tests">
+              <option value="test_1">Test Example 1</option>
+              <option value="test_2">Test Example 2</option>
+              <option value="test_3">Test Example 3</option>
+              <option value="test_4">Test Example 4</option>
+            </select>
+            <br><br>
+          </div>
+          <script>
+            function run() {
+              var select = document.getElementById('tests');
+              var option = select.options[select.selectedIndex];
+              alert(option.text+" started")
+            }
+        </script>
+            <div class="begin-btn">
+              <button type="button" onclick=run()>Begin</button>
+            </div>
+          </form>
       </body>
   </html>
