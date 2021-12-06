@@ -1,6 +1,8 @@
 from django.http import JsonResponse, response
 from .OS_monitor import cpu_cores, cpu_util, disk_name, disk_total, disk_used, memory_avail, memory_used, user_boot_time, user_name
 from django.shortcuts import render
+from django.urls import reverse
+
 def allData(request):
     response = JsonResponse(
         {
@@ -48,4 +50,5 @@ def table(request):
     }
 
     return render(request, "simple/table.html",context=context)
+
 

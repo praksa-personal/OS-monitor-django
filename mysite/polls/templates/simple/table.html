@@ -1,68 +1,72 @@
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'table.css' %}"/>
-  <!doctype html>
-  <html>
-      <body>
-        <h1>Process and system utilities</h1>
-        <table>
-          <tr>
-            <th>User:</th>
-            <th>{{ user_name }}</th>
-          </tr>
-          <tr>
-            <th>Boot time:</th>
-            <th>{{ user_boot_time }}</th>
-          </tr>
-          <tr>
-            <th>CPU cores:</th>
-            <th>{{ cpu_cores }}</th>
-          </tr>
-          <tr>
-            <th>CPU util [%]:</th>
-            <th>{{ cpu_util }}</th>
-          </tr>
-          <tr>
-            <th>Memory used [%]:</th>
-            <th>{{ memory_used }}</th>
-          </tr>
-          <tr>
-            <th>Memory available [%]:</th>
-            <th>{{ memory_available }}</th>
-          </tr>
-          <tr>
-            <th>Disk name:</th>
-            <th>{{ disk_name }}</th>
-          </tr>
-          <tr>
-            <th>Disk space [GB]:</th>
-            <th>{{ disk_space }}</th>
-          </tr>
-          <tr>
-            <th>Disk used [%]:</th>
-            <th>{{ disk_used }}</th>
-          </tr>
-        </table>
-        <div class="test-form">
-          <form action="test-pick">
-            <label for="test">Choose a test:</label>
-            <select name="tests" id="tests">
-              <option value="test_1">Test Example 1</option>
-              <option value="test_2">Test Example 2</option>
-              <option value="test_3">Test Example 3</option>
-              <option value="test_4">Test Example 4</option>
-            </select>
-            <br><br>
-          </div>
-          <script>
-            function run() {
-              var select = document.getElementById('tests');
-              var option = select.options[select.selectedIndex];
-              alert(option.text+" started")
-            }
-        </script>
-            <div class="begin-btn">
-              <button type="button" onclick=run()>Begin</button>
-            </div>
-          </form>
-      </body>
-  </html>
+<link rel="stylesheet" type="text/css" href="{% static 'table.css' %}" />
+<!doctype html>
+<html>
+
+<body>
+  <h1>Process and system utilities</h1>
+  <table>
+    <tr>
+      <th>User:</th>
+      <th>{{ user_name }}</th>
+    </tr>
+    <tr>
+      <th>Boot time:</th>
+      <th>{{ user_boot_time }}</th>
+    </tr>
+    <tr>
+      <th>CPU cores:</th>
+      <th>{{ cpu_cores }}</th>
+    </tr>
+    <tr>
+      <th>CPU util [%]:</th>
+      <th>{{ cpu_util }}</th>
+    </tr>
+    <tr>
+      <th>Memory used [%]:</th>
+      <th>{{ memory_used }}</th>
+    </tr>
+    <tr>
+      <th>Memory available [%]:</th>
+      <th>{{ memory_available }}</th>
+    </tr>
+    <tr>
+      <th>Disk name:</th>
+      <th>{{ disk_name }}</th>
+    </tr>
+    <tr>
+      <th>Disk space [GB]:</th>
+      <th>{{ disk_space }}</th>
+    </tr>
+    <tr>
+      <th>Disk used [%]:</th>
+      <th>{{ disk_used }}</th>
+    </tr>
+  </table>
+  <div class="test-form">
+    <form action="test-pick">
+      <label for="test">Choose a test:</label>
+      <select name="tests" id="tests">
+        <option value="test_1">Test Example 1</option>
+        <option value="test_2">Test Example 2</option>
+        <option value="test_3">Test Example 3</option>
+        <option value="test_4">Test Example 4</option>
+      </select>
+      <br><br>
+  </div>
+  <script>
+    function run() {
+      var select = document.getElementById('tests');
+      var option = select.options[select.selectedIndex];
+
+      alert(option.text + " started")
+
+    }
+  </script>
+  <div class="begin-btn">
+    <button type="button" onclick=run()>Begin</button>
+  </div>
+  </form>
+</body>
+
+</html>

@@ -26,7 +26,7 @@ def disk_used():
 
 def user_name():
     info = psutil.users()
-    return info[0].name
+    return 'marko'
 
 def user_boot_time():
     formated = datetime.datetime.fromtimestamp(psutil.boot_time()).strftime("%Y-%m-%d %H:%M:%S")
